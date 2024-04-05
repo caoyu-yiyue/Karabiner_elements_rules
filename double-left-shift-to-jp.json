@@ -1,0 +1,62 @@
+{
+    "description": "Double Click right shift to change input sorce to jp",
+    "manipulators": [
+        {
+            "type": "basic",
+            "conditions": [
+                {
+                    "type": "variable_if",
+                    "name": "left-shift",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "left_shift"
+            },
+            "to": [
+                {
+                    "select_input_source": {
+                        "input_mode_id": "com.apple.inputmethod.Japanese",
+                        "input_source_id": "com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese",
+                        "language": "ja"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "basic",
+            "from": {
+                "key_code": "left_shift"
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "left-shift",
+                        "value": 1
+                    }
+                },
+                {
+                    "key_code": "left_shift"
+                }
+            ],
+            "to_delayed_action": {
+                "to_if_invoked": [
+                    {
+                        "set_variable": {
+                            "name": "left-shift",
+                            "value": 0
+                        }
+                    }
+                ],
+                "to_if_canceled": [
+                    {
+                        "set_variable": {
+                            "name": "left-shift",
+                            "value": 0
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
