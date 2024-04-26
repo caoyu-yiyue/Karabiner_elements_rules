@@ -20,6 +20,14 @@
                         "input_source_id": "com.logcg.inputmethod.LogInputMac3.LogInputMac3IME",
                         "language": "zh-Hans"
                     }
+                },
+                {
+                    "key_code": "caps_lock"
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "key_code": "caps_lock"
                 }
             ]
         },

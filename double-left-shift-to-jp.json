@@ -20,6 +20,14 @@
                         "input_source_id": "com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese",
                         "language": "ja"
                     }
+                },
+                {
+                    "key_code": "caps_lock"
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "key_code": "caps_lock"
                 }
             ]
         },
